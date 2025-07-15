@@ -1,1 +1,45 @@
-หน้่าแรก
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ - ระบบทะเบียนนักศึกษา</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+
+</head>
+
+<body class="bg-light text-dark font-sans">
+    <!-- โลโก้ -->
+    <header class="text-center py-6">
+        <img src="components/logo.png" alt="MJU Logo" class="mx-auto w-24 md:w-32 mb-2">
+        <h1 class="text-xl md:text-2xl font-bold text-primary">ระบบทะเบียนนักศึกษา มหาวิทยาลัยแม่โจ้</h1>
+    </header>
+
+    <div class="min-h-screen flex flex-col md:flex-row animate-fade">
+        <!-- นักศึกษา -->
+        <div class="flex-1 flex items-center justify-center bg-accent text-primary p-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-2xl md:text-3xl font-bold">นักศึกษา</h2>
+                <p class="text-base md:text-lg">เข้าสู่ระบบเพื่อตรวจสอบตารางเรียน ปฏิทิน และข้อมูลห้องเรียน</p>
+                <a href="std/indexstd.html"
+                    class="inline-block bg-primary text-accent px-6 py-2 rounded-lg hover:bg-[#0f2f21] hover:shadow-xl transition">เข้าสู่ระบบนักศึกษา</a>
+            </div>
+        </div>
+
+        <!-- อาจารย์ -->
+        <div class="flex-1 flex items-center justify-center bg-primary text-accent p-8">
+            <div class="text-center space-y-4">
+                <h2 class="text-2xl md:text-3xl font-bold">อาจารย์</h2>
+                <p class="text-base md:text-lg">เข้าสู่ระบบเพื่อตรวจสอบรายวิชาและบันทึกผลเกรดรายบุคคล</p>
+                <a href="teacher/indexteach.html   "
+                    class="inline-block bg-accent text-primary px-6 py-2 rounded-lg hover:bg-[#f5deb3] hover:shadow-xl transition">เข้าสู่ระบบอาจารย์</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
