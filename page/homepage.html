@@ -1,45 +1,71 @@
 <!DOCTYPE html>
 <html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เข้าสู่ระบบ - ระบบทะเบียนนักศึกษา</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js"></script>
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>เข้าสู่ระบบ - ระบบทะเบียนนักศึกษา</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="components/script.js" defer></script>
 </head>
 
-<body class="bg-light text-dark font-sans">
-    <!-- โลโก้ -->
-    <header class="text-center py-6">
-        <img src="components/logo.png" alt="MJU Logo" class="mx-auto w-24 md:w-32 mb-2">
+<body class="bg-gradient-to-br from-light to-[#f5f5f5] text-dark font-sans min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="text-center py-6 animate-fade">
+        <img src="components/image/logo.png "alt="MJU Logo" class="mx-auto w-24 md:w-32 mb-2 " />
         <h1 class="text-xl md:text-2xl font-bold text-primary">ระบบทะเบียนนักศึกษา มหาวิทยาลัยแม่โจ้</h1>
     </header>
 
-    <div class="min-h-screen flex flex-col md:flex-row animate-fade">
+    <!-- Welcome -->
+    <section class="max-w-4xl mx-auto px-4 md:px-6 mb-6 text-center animate-fade">
+        <h2 class="text-2xl font-bold mb-2">👋 ยินดีต้อนรับสู่ระบบทะเบียนนักศึกษา</h2>
+        <p class="text-gray-700">กรุณาเลือกประเภทผู้ใช้เพื่อเข้าสู่ระบบ</p>
+    </section>
+
+    <!-- Login Options -->
+    <main class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-10 pb-10 animate-fade">
+
         <!-- นักศึกษา -->
-        <div class="flex-1 flex items-center justify-center bg-accent text-primary p-8">
-            <div class="text-center space-y-2">
-                <h2 class="text-2xl md:text-3xl font-bold">นักศึกษา</h2>
-                <p class="text-base md:text-lg">เข้าสู่ระบบเพื่อตรวจสอบตารางเรียน ปฏิทิน และข้อมูลห้องเรียน</p>
-                <a href="std/indexstd.html"
-                    class="inline-block bg-primary text-accent px-6 py-2 rounded-lg hover:bg-[#0f2f21] hover:shadow-xl transition">เข้าสู่ระบบนักศึกษา</a>
-            </div>
+        <div
+            class="bg-accent text-primary p-6 rounded-xl shadow-md flex flex-col items-center justify-center text-center space-y-4 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+            <div class="text-5xl animate-bounce">🎓</div>
+            <h2 class="text-2xl md:text-3xl font-bold">นักศึกษา</h2>
+            <p class="text-base md:text-lg">เข้าสู่ระบบเพื่อตรวจสอบตารางเรียน ปฏิทิน และข้อมูลห้องเรียน</p>
+            <a href="std/indexstd.html"
+                class="bg-primary text-accent px-6 py-2 rounded-lg hover:bg-[#121221] transition-all duration-300 shadow hover:shadow-md">
+                เข้าสู่ระบบนักศึกษา
+            </a>
         </div>
 
         <!-- อาจารย์ -->
-        <div class="flex-1 flex items-center justify-center bg-primary text-accent p-8">
-            <div class="text-center space-y-4">
-                <h2 class="text-2xl md:text-3xl font-bold">อาจารย์</h2>
-                <p class="text-base md:text-lg">เข้าสู่ระบบเพื่อตรวจสอบรายวิชาและบันทึกผลเกรดรายบุคคล</p>
-                <a href="teacher/indexteach.html   "
-                    class="inline-block bg-accent text-primary px-6 py-2 rounded-lg hover:bg-[#f5deb3] hover:shadow-xl transition">เข้าสู่ระบบอาจารย์</a>
-            </div>
+        <div
+            class="bg-primary text-accent p-6 rounded-xl shadow-md flex flex-col items-center justify-center text-center space-y-4 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+            <div class="text-5xl animate-bounce">👨‍🏫</div>
+            <h2 class="text-2xl md:text-3xl font-bold">อาจารย์</h2>
+            <p class="text-base md:text-lg">เข้าสู่ระบบเพื่อตรวจสอบรายวิชาและบันทึกผลเกรดรายบุคคล</p>
+            <a href="teacher/indexteach.html"
+                class="bg-accent text-primary px-6 py-2 rounded-lg hover:bg-[#f5deb3] transition-all duration-300 shadow hover:shadow-md">
+                เข้าสู่ระบบอาจารย์
+            </a>
         </div>
-    </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1e1e2f] text-[#f0c040] text-center p-4 mt-8">
+        © 2025 ระบบทะเบียนนักศึกษา มหาวิทยาลัยแม่โจ้
+    </footer>
+    <script>
+        // เมนูสำหรับมือถือ: กดปุ่มเพื่อแสดง/ซ่อนเมนู
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
 </body>
 
 </html>

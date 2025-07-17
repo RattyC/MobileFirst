@@ -1,24 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
 
-    <nav class="bg-[#2b2b3d] text-[#f0c040] p-4 flex justify-between items-center mt-4">
-        <div class="text-xl font-bold">อาจารย์: ระบบทะเบียน</div>
-        <div class="space-x-4 hidden md:flex">
-            <a href="#" class="hover:underline">รายวิชาที่สอน</a>
-            <a href="#" class="hover:underline">บันทึกเกรดรายบุคคล</a>
-            <a href="#" class="hover:underline">ออกจากระบบ</a>
-        </div>
-        <button class="md:hidden text-[#f0c040]" id="teacherMenuBtn">☰</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบทะเบียนอาจารย์</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+    <nav class="bg-[#1e1e2f] text-[#f0c040] p-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <img src="../components/image/logo.png" alt="MJU Logo" class="mx-auto w-10 md:w-20 mb-2">
+            <div class="tet-xl font-bold">TEACHER MJU</div>
+            <div class="space-x-4 hidden md:flex">
+                <a href="../homepage.html" class="hover:underline">หน้าแรก</a>
+                <a href="Dashboard.html" class="hover:underline">ตารางสอน</a>
+                <a href="GradeInput.html" class="hover:underline">บันทีกเกรด</a>
+                <a href="../RoomUsage.html" class="hover:underline">ตารางการใช้ห้อง</a>
+                <a href="../Calendar.html" class="hover:underline">ปฏิทินการศึกษา</a>
+            </div>
+            <button class="md:hidden text-[#f0c040]" id="menuBtn">☰</button>
     </nav>
-
-    <!-- Mobile menu อาจารย์ -->
-    <div class="md:hidden hidden bg-[#2b2b3d] text-[#f0c040] p-4" id="teacherMobileMenu">
-        <a href="#" class="block py-1">รายวิชาที่สอน</a>
-        <a href="#" class="block py-1">บันทึกเกรดรายบุคคล</a>
-        <a href="#" class="block py-1">ออกจากระบบ</a>
+    <div class="md:hidden hidden bg-[#1e1e2f] text-[#f0c040] p-4" id="mobileMenu">
+        <a href="../homepage.html" class="block py-1">หน้าแรก</a>
+        <a href="Dashboard.html" class="block py-1">ตารางสอน</a>
+        <a href="GradeInput.html" class="hover:underline">บันทีกเกรด</a>
+        <a href="../RoomUsage.html" class="block py-1">ตารางการใช้ห้อง</a>
+        <a href="../Calendar.html" class="block py-1">ปฏิทินการศึกษา</a>
     </div>
 
-    <!-- Hero Section -->
-    <section class="text-center p-6 md:p-12">
-        <h1 class="text-2xl md:text-4xl font-semibold mb-4">ระบบทะเบียนนักศึกษาแบบหรูหรา ✨</h1>
-        <p class="text-gray-600 max-w-xl mx-auto">เข้าถึงข้อมูลตารางเรียน ตารางห้อง และปฏิทินการศึกษาได้ทุกที่ ทุกเวลา
-            พร้อมระบบบันทึกผลเกรดสำหรับอาจารย์</p>
+    <!-- Cards Menu -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-6 max-w-6xl mx-auto">
+        <a href="Dashboard.html" class="block bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
+            <h2 class="text-lg font-semibold mb-2">📋 ตารางสอน</h2>
+            <p class="text-gray-600">ดูตารางสอนรายวัน/สัปดาห์</p>
+        </a>
+        <a href="GradeInput.html" class="block bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
+            <h2 class="text-lg font-semibold mb-2">🏫 บันทึกเกรด</h2>
+            <p class="text-gray-600">อัปเดทเกรดนักศึกษา</p>
+        </a>
     </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-[#1e1e2f] text-[#f0c040] text-center p-4 mt-8">
+        © 2025 ระบบทะเบียนนักศึกษา มหาวิทยาลัยแม่โจ้
+    </footer>
+    <script>
+        // เมนูสำหรับมือถือ: กดปุ่มเพื่อแสดง/ซ่อนเมนู
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
