@@ -6,38 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ตารางเรียน</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1e1e2f',
-                        accent: '#f0c040',
-                        light: '#f9f9f9',
-                        dark: '#212121'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif']
-                    },
-                    animation: {
-                        fade: 'fadeIn 0.8s ease-out',
-                        bounceIn: 'bounceIn 0.6s ease-in-out'
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: 0 },
-                            '100%': { opacity: 1 }
-                        },
-                        bounceIn: {
-                            '0%': { transform: 'scale(0.95)', opacity: 0 },
-                            '80%': { transform: 'scale(1.05)', opacity: 1 },
-                            '100%': { transform: 'scale(1)', opacity: 1 }
-                        }
-                    }
-                }
-            }
-        };
-    </script>
+    <script src="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"></script>
+    <script src="../components/script.js" defer></script>
+    <link href="../components/style.css" rel="stylesheet" />
+    
 </head>
 
 <body class="bg-light text-primary">
@@ -159,8 +131,7 @@
 
     <!-- ตารางสอบ -->
     <div class="max-w-6xl mx-auto bg-white p-4 rounded-xl shadow mb-10">
-        <h2 class="text-lg font-semibold mb-4">📘 ตารางสอบ</h2>
-        <table class="w-full text-sm border-collapse">
+        <h2 class="text-lg font-semibold mb-4">📘 ตารางสอบ</h2><table class="w-full text-sm border-collapse">
             <thead class="bg-accent text-primary">
                 <tr>
                     <th class="border p-2">รหัสวิชา</th>

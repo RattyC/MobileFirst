@@ -4,17 +4,33 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>การใช่ห่้อง</title>
+    <title>การใช้ห้อง</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="components/script.js" defer></script>
+    <script src="../components/script.js" defer></script>
 </head>
 
-<body class="bg-gradient-to-br from-light to-[#f5f5f5] text-dark font-sans min-h-screen flex flex-col">
+<body class="bg-gray-100 text-gray-900 font-sans">
 
-    <!-- Header -->
-    <header class="text-center py-6 animate-fade">
-        <img src="components/image/logo.png "alt="MJU Logo" class="mx-auto w-24 md:w-32 mb-2 " />
-        <h1 class="text-xl md:text-2xl font-bold text-primary">ระบบทะเบียนนักศึกษา มหาวิทยาลัยแม่โจ้</h1>
-    </header>
-    <!-- Welcome -->
+    <!--Navbar -->
+    <nav class="bg-primary text-accent p-4 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+            <img src="components/image/logo.png" alt="MJU Logo" class="w-10 h-10" />
+            <span class="text-lg md:text-xl font-bold"> RoomUsage MJU</span>
+        </div>
+
+        <div class="hidden md:flex space-x-6 text-sm md:text-base">
+            <a href="homepage.html" class="hover:underline">หน้าแรก</a>
+            <a href="std/Schedule.html" class="hover:underline">ตารางเรียน</a>
+            <a href="Calendar.html" class="hover:underline">ปฏิทินการศึกษา</a>
+        </div>
+
+        <button class="md:hidden text-accent" id="menuBtn">☰</button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-primary text-accent p-4 space-y-2">
+        <a href="homepage.html" class="block">หน้าแรก</a>
+        <a href="std/Schedule.html" class="block">ตารางเรียน</a>
+        <a href="Calendar.html" class="block">ปฏิทินการศึกษา</a>
+    </div>

@@ -1,19 +1,181 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" class="bg-light font-sans">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ปฏิทินการศึกษา</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
     <script src="components/script.js" defer></script>
+    <link rel="stylesheet" href="components/CSStyle.css">
 </head>
 
-<body class="bg-gradient-to-br from-light to-[#f5f5f5] text-dark font-sans min-h-screen flex flex-col">
+<body class="bg-light text-primary">
+    <!--Navbar -->
+    <nav class="bg-primary text-accent p-4 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+            <img src="components/image/logo.png" alt="MJU Logo" class="w-10 h-10" />
+            <span class="text-lg md:text-xl font-bold">ปฏิทินการศึกษา</span>
+        </div>
 
-    <!-- Header -->
-    <header class="text-center py-6 animate-fade">
-        <img src="components/image/logo.png "alt="MJU Logo" class="mx-auto w-24 md:w-32 mb-2 " />
-        <h1 class="text-xl md:text-2xl font-bold text-primary">ปฏิทินการศึกษา</h1>
-    </header>
+        <div class="hidden md:flex space-x-6 text-sm md:text-base">
+            <a href="homepage.html" class="hover:underline">หน้าแรก</a>
+            <a href="Schedule.html" class="hover:underline">ตารางเรียน</a>
+            <a href="RoomUsage.html" class="hover:underline">ตารางการใช้ห้อง</a>
+            <a href="Calendar.html" class="hover:underline">ปฏิทินการศึกษา</a>
+        </div>
+
+        <button class="md:hidden text-accent" id="menuBtn">☰</button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-primary text-accent p-4 space-y-2">
+        <a href="homepage.html" class="block">หน้าแรก</a>
+        <a href="Schedule.html" class="block">ตารางเรียน</a>
+        <a href="RoomUsage.html" class="block">ตารางการใช้ห้อง</a>
+        <a href="Calendar.html" class="block">ปฏิทินการศึกษา</a>
+    </div>
+    <!-- hero  -->
+    <div class="max-w-6xl mx-auto bg-white p-6 rounded-xl shadow mb-10">
+        <h2 class="text-xl font-semibold mb-4">📅 ปฏิทินการศึกษา (ภาคเรียนที่ 1 ปี 2568)</h2>
+        <table class="w-full text-sm border-collapse">
+            <thead class="bg-accent text-primary">
+                <tr>
+                    <th class="border p-2">รายการ</th>
+                    <th class="border p-2">วันเริ่มต้น</th>
+                    <th class="border p-2">วันสิ้นสุด</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-light">
+                    <td class="border p-2 font-semibold">ลงทะเบียนปกติ (on-line)</td>
+                    <td class="border p-2">17 มิ.ย. 2568 0:01 น.</td>
+                    <td class="border p-2">20 มิ.ย. 2568 23:59 น.</td>
+                </tr>
+                <tr class="bg-white">
+                    <td class="border p-2">- ชั้นปี 1</td>
+                    <td class="border p-2">18 มิ.ย. 2568 0:01 น.</td>
+                    <td class="border p-2">18 มิ.ย. 2568 23:59 น.</td>
+                </tr>
+                <tr class="bg-light">
+                    <td class="border p-2">- ชั้นปี 2</td>
+                    <td class="border p-2">19 มิ.ย. 2568 8:30 น.</td>
+                    <td class="border p-2">19 มิ.ย. 2568 23:59 น.</td>
+                </tr>
+                <tr class="bg-white">
+                    <td class="border p-2">- ชั้นปี 3-4, อื่นๆ</td>
+                    <td class="border p-2">20 มิ.ย. 2568 8:30 น.</td>
+                    <td class="border p-2">20 มิ.ย. 2568 23:59 น.</td>
+                </tr>
+                <tr class="bg-light">
+                    <td class="border p-2 font-semibold">วันเปิดภาคการศึกษา</td>
+                    <td class="border p-2">23 มิ.ย. 2568 8:00 น.</td>
+                    <td class="border p-2">23 มิ.ย. 2568 8:00 น.</td>
+                </tr>
+                <tr class="bg-white">
+                    <td class="border p-2 font-semibold">เพิ่ม/ลด/เปลี่ยนกลุ่ม (on-line)</td>
+                    <td class="border p-2">23 มิ.ย. 2568 8:30 น.</td>
+                    <td class="border p-2">25 มิ.ย. 2568 23:59 น.</td>
+                </tr>
+                <tr class="bg-light">
+                    <td class="border p-2">- ลดรายวิชาได้เงินคืนเต็ม</td>
+                    <td class="border p-2">12 มิ.ย. 2568 8:30 น.</td>
+                    <td class="border p-2">25 มิ.ย. 2568 23:59 น.</td>
+                </tr>
+                <tr class="bg-white">
+                    <td class="border p-2 font-semibold">ลงทะเบียนล่าช้า</td>
+                    <td class="border p-2">23 มิ.ย. 2568 8:30 น.</td>
+                    <td class="border p-2">25 มิ.ย. 2568 23:59 น.</td>
+                </tr>
+                <tr class="bg-light">
+                    <td class="border p-2">- ขอเทียบโอน นศ.ใหม่</td>
+                    <td class="border p-2">17 มิ.ย. 2568 8:30 น.</td>
+                    <td class="border p-2">25 มิ.ย. 2568 16:30 น.</td>
+                </tr>
+                <tr class="bg-white">
+                    <td class="border p-2 font-semibold">งวดชำระเงิน</td>
+                    <td class="border p-2">30 มิ.ย. 2568 8:30 น.</td>
+                    <td class="border p-2">6 ก.ค. 2568 20:00 น.</td>
+                </tr>
+                <tr class="bg-light">
+                    <td class="border p-2">- พิมพ์ใบแจ้งหนี้ผ่านเว็บ</td>
+                    <td class="border p-2">30 มิ.ย. 2568</td>
+                    <td class="border p-2">6 ก.ค. 2568</td>
+                </tr>
+                <tr class="bg-white">
+                    <td class="border p-2">- แจ้งสำเร็จการศึกษา</td>
+                    <td class="border p-2">14 ก.ค. 2568</td>
+                    <td class="border p-2">14 ต.ค. 2568</td>
+                </tr>
+                <tr class="bg-light">
+                    <td class="border p-2 font-semibold">รักษาสภาพ / ลาพัก</td>
+                    <td class="border p-2">23 มิ.ย. 2568</td>
+                    <td class="border p-2">23 ก.ค. 2568</td>
+                </tr>
+                <tr class="bg-white">
+                    <td class="border p-2">- แก้ I</td>
+                    <td class="border p-2">23 ก.ค. 2568</td>
+                    <td class="border p-2">23 ก.ค. 2568</td>
+                </tr>
+                <tr class="bg-light">
+                    <td class="border p-2 font-semibold">สอบกลางภาค</td>
+                    <td class="border p-2">18 ส.ค. 2568</td>
+                    <td class="border p-2">24 ส.ค. 2568</td>
+                </tr>
+                <tr class="bg-white">
+                    <td class="border p-2">- ถอน W</td>
+                    <td class="border p-2">7 ก.ค. 2568</td>
+                    <td class="border p-2">9 ก.ย. 2568</td>
+                </tr>
+                <tr class="bg-light">
+                    <td class="border p-2 font-semibold">วันสุดท้ายเรียน</td>
+                    <td class="border p-2">12 ต.ค. 2568</td>
+                    <td class="border p-2">12 ต.ค. 2568</td>
+                </tr>
+                <tr class="bg-white">
+                    <td class="border p-2 font-semibold">สอบปลายภาค</td>
+                    <td class="border p-2">14 ต.ค. 2568</td>
+                    <td class="border p-2">27 ต.ค. 2568</td>
+                </tr>
+                <tr class="bg-light">
+                    <td class="border p-2 font-semibold">ปิดภาคการศึกษา</td>
+                    <td class="border p-2">28 ต.ค. 2568</td>
+                    <td class="border p-2">28 ต.ค. 2568</td>
+                </tr>
+                <tr class="bg-white">
+                    <td class="border p-2">- ส่งผลการศึกษา</td>
+                    <td class="border p-2">6 พ.ย. 2568</td>
+                    <td class="border p-2">6 พ.ย. 2568</td>
+                </tr>
+                <tr class="bg-light">
+                    <td class="border p-2">- ประกาศผลการศึกษา</td>
+                    <td class="border p-2">7 พ.ย. 2568</td>
+                    <td class="border p-2">7 พ.ย. 2568</td>
+                </tr>
+                <tr class="bg-white">
+                    <td class="border p-2 font-semibold">วันไหว้ครู</td>
+                    <td class="border p-2">24 ก.ค. 2568</td>
+                    <td class="border p-2">24 ก.ค. 2568</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="mt-2 text-xs text-gray-600">* หมายเหตุ: ข้อมูลอาจมีการเปลี่ยนแปลง โปรดติดตามประกาศอย่างเป็นทางการ</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#1e1e2f] text-[#f0c040] text-center p-4 mt-8">
+        © 2025 ระบบทะเบียนนักศึกษา มหาวิทยาลัยแม่โจ้
+    </footer>
+    <script>
+        // เมนูสำหรับมือถือ: กดปุ่มเพื่อแสดง/ซ่อนเมนู
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if(menuBtn && mobileMenu){
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
