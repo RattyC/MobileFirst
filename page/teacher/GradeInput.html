@@ -11,84 +11,98 @@
     <link href="../components/style.css" rel="stylesheet" />
 </head>
 
-<body class="bg-gray-50 text-gray-800 font-sans">
-    <!-- Navbar -->
+<body class="bg-light text-primary">
+    <!--Navbar -->
     <nav class="bg-primary text-accent p-4 flex items-center justify-between">
         <div class="flex items-center space-x-3">
             <img src="../components/image/logo.png" alt="MJU Logo" class="w-10 h-10" />
             <span class="text-lg md:text-xl font-bold">REGISTAR.MJU</span>
         </div>
+
         <div class="hidden md:flex space-x-6 text-sm md:text-base">
             <a href="../homepage.html" class="hover:underline">หน้าแรก</a>
-            <a href="GradeInput.html" class="hover:underline">บันทึกเกรด</a>
+            <a href="Dashboard.html" class="hover:underline">ตารางสอน</a>
+            <a href="GradeInput.html" class="hover:underline">บันทีกเกรด</a>
             <a href="../RoomUsage.html" class="hover:underline">ตารางการใช้ห้อง</a>
             <a href="../Calendar.html" class="hover:underline">ปฏิทินการศึกษา</a>
         </div>
+
         <button class="md:hidden text-accent" id="menuBtn">☰</button>
     </nav>
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="md:hidden hidden bg-primary text-accent p-4 space-y-2">
         <a href="../homepage.html" class="block">หน้าแรก</a>
-        <a href="GradeInput.html" class="block">บันทึกเกรด</a>
-        <a href="../RoomUsage.html" class="block">ตารางการใช้ห้อง</a>
-        <a href="../Calendar.html" class="block">ปฏิทินการศึกษา</a>
+        <a href="Dashboard.html" class="block">ตารางเรียน</a>
+        <a href="GradeInput.html" class="block">บันทีกเกรด<a>
+                <a href="../RoomUsage.html" class="block">ตารางการใช้ห้อง</a>
+                <a href="../Calendar.html" class="block">ปฏิทินการศึกษา</a>
     </div>
-    <main class="p-6 animate-fade">
-        <h1 class="text-2xl font-semibold mb-4">บันทึกเกรดรายวิชา</h1>
 
-        <!-- Subject Selector -->
-        <div class="mb-6">
-            <label class="block mb-2 font-semibold">เลือกรายวิชา:</label>
-            <select class="w-full p-2 border rounded-md bg-white shadow">
-                <option>CS101 - Introduction to Computer Science</option>
-                <option>CS204 - Data Structures</option>
-                <option>CS301 - Database Systems</option>
-            </select>
-        </div>
+    <!-- Subject Selector -->
+    <div class="mb-6">
+        <label class="block mb-2 font-semibold">เลือกรายวิชา:</label>
+        <select class="w-full p-2 border rounded-md bg-white shadow">
+            <option>CS101 - Introduction to Computer Science</option>
+            <option>CS204 - Data Structures</option>
+            <option>CS301 - Database Systems</option>
+        </select>
+    </div>
 
-        <!-- Grade Table -->
-        <div class="overflow-x-auto">
-            <table class="w-full table-auto border-collapse shadow-lg bg-white rounded-lg animate-bounceIn">
-                <thead class="bg-primary text-white">
-                    <tr>
-                        <th class="px-4 py-2">รหัสนักศึกษา</th>
-                        <th class="px-4 py-2">ชื่อ-นามสกุล</th>
-                        <th class="px-4 py-2">เกรด</th>
-                    </tr>
-                </thead>
-                <tbody class="text-dark">
-                    <tr class="border-b hover:bg-light">
-                        <td class="px-4 py-2">65123456</td>
-                        <td class="px-4 py-2">นางสาวพิมพ์ชนก ใจดี</td>
-                        <td class="px-4 py-2">
-                            <input type="text" placeholder="A, B+, C..." class="w-full p-1 border rounded-md" />
-                        </td>
-                    </tr>
-                    <tr class="border-b hover:bg-light">
-                        <td class="px-4 py-2">65123457</td>
-                        <td class="px-4 py-2">นายวรวิทย์ แสงทอง</td>
-                        <td class="px-4 py-2">
-                            <input type="text" class="w-full p-1 border rounded-md" />
-                        </td>
-                    </tr>
-                    <tr class="border-b hover:bg-light">
-                        <td class="px-4 py-2">65123458</td>
-                        <td class="px-4 py-2">นางสาวมุกดา ทองแท้</td>
-                        <td class="px-4 py-2">
-                            <input type="text" class="w-full p-1 border rounded-md" />
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <!-- Grade Table -->
+    <div class="overflow-x-auto">
+        <table class="w-full table-auto border-collapse shadow-lg bg-white rounded-lg animate-bounceIn">
+            <thead class="bg-primary text-white">
+                <tr>
+                    <th class="px-4 py-2">รหัสนักศึกษา</th>
+                    <th class="px-4 py-2">ชื่อ-นามสกุล</th>
+                    <th class="px-4 py-2">เกรด</th>
+                </tr>
+            </thead>
+            <tbody class="text-dark">
+                <tr class="border-b hover:bg-light">
+                    <td class="px-4 py-2">65123456</td>
+                    <td class="px-4 py-2">นางสาวพิมพ์ชนก ใจดี</td>
+                    <td class="px-4 py-2">
+                        <input type="text" placeholder="A, B+, C..." class="w-full p-1 border rounded-md" />
+                    </td>
+                </tr>
+                <tr class="border-b hover:bg-light">
+                    <td class="px-4 py-2">65123457</td>
+                    <td class="px-4 py-2">นายวรวิทย์ แสงทอง</td>
+                    <td class="px-4 py-2">
+                        <input type="text" class="w-full p-1 border rounded-md" />
+                    </td>
+                </tr>
+                <tr class="border-b hover:bg-light">
+                    <td class="px-4 py-2">65123458</td>
+                    <td class="px-4 py-2">นางสาวมุกดา ทองแท้</td>
+                    <td class="px-4 py-2">
+                        <input type="text" class="w-full p-1 border rounded-md" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-        <div class="mt-6">
-            <button class="bg-accent text-white px-4 py-2 rounded-md hover:bg-yellow-400 shadow-md">
-                บันทึกเกรด
-            </button>
-        </div>
+    <div class="mt-6">
+        <button class="bg-accent text-white px-4 py-2 rounded-md hover:bg-yellow-400 shadow-md">
+            บันทึกเกรด
+        </button>
+    </div>
     </main>
+    <!-- Footer -->
+    <footer class="bg-[#1e1e2f] text-[#f0c040] text-center p-4 mt-8">
+        © 2025 ระบบทะเบียนนักศึกษา มหาวิทยาลัยแม่โจ้
+    </footer>
+    <script>
+        // เมนูสำหรับมือถือ: กดปุ่มเพื่อแสดง/ซ่อนเมนู
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script
 </body>
 
 </html>
