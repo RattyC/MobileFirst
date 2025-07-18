@@ -8,31 +8,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js"></script>
+    <script src="../components/script.js" defer></script>
+    <link href="../components/style.css" rel="stylesheet" />
 </head>
 
-<body class="bg-gray-100 text-gray-900">
-    <nav class="bg-[#1e1e2f] text-[#f0c040] p-4 flex justify-between items-center">
-        <div class="flex items-center space-x-2">
-            <img src="../components/image/logo.png" alt="MJU Logo" class="mx-auto w-10 md:w-20 mb-2">
-            <div class="tet-xl font-bold">TEACHER MJU</div>
-            <div class="space-x-4 hidden md:flex">
-                <a href="../homepage.html" class="hover:underline">หน้าแรก</a>
-                <a href="Dashboard.html" class="hover:underline">ตารางสอน</a>
-                <a href="GradeInput.html" class="hover:underline">บันทีกเกรด</a>
+<body class="bg-light text-primary">
+    <!--Navbar -->
+    <nav class="bg-primary text-accent p-4 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+            <img src="../components/image/logo.png" alt="MJU Logo" class="w-10 h-10" />
+            <span class="text-lg md:text-xl font-bold">REGISTAR.MJU</span>
+        </div>
+
+        <div class="hidden md:flex space-x-6 text-sm md:text-base">
+            <a href="../homepage.html" class="hover:underline">หน้าแรก</a>
+            <a href="Dashboard.html" class="hover:underline">ตารางเรียน</a>
+            <a href="GradeInput.html" class="hover:underline">บันทีกเกรดa>
                 <a href="../RoomUsage.html" class="hover:underline">ตารางการใช้ห้อง</a>
                 <a href="../Calendar.html" class="hover:underline">ปฏิทินการศึกษา</a>
-            </div>
-            <button class="md:hidden text-[#f0c040]" id="menuBtn">☰</button>
-    </nav>
-    <div class="md:hidden hidden bg-[#1e1e2f] text-[#f0c040] p-4" id="mobileMenu">
-        <a href="../homepage.html" class="block py-1">หน้าแรก</a>
-        <a href="Dashboard.html" class="block py-1">ตารางสอน</a>
-        <a href="GradeInput.html" class="hover:underline">บันทีกเกรด</a>
-        <a href="../RoomUsage.html" class="block py-1">ตารางการใช้ห้อง</a>
-        <a href="../Calendar.html" class="block py-1">ปฏิทินการศึกษา</a>
-    </div>
+        </div>
 
+        <button class="md:hidden text-accent" id="menuBtn">☰</button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-primary text-accent p-4 space-y-2">
+        <a href="../homepage.html" class="block">หน้าแรก</a>
+        <a href="Dashboard.html" class="block">ตารางเรียน</a>
+        <a href="GradeInput.html" class="block">บันทีกเกรด</a>
+            <a href="../RoomUsage.html" class="block">ตารางการใช้ห้อง</a>
+            <a href="../Calendar.html" class="block">ปฏิทินการศึกษา</a>
+    </div>
     <!-- Cards Menu -->
     <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-6 max-w-6xl mx-auto">
         <a href="Dashboard.html" class="block bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">

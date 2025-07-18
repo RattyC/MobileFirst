@@ -4,33 +4,84 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>การใช้ห้อง</title>
+    <title>ตารางการใช้ห้องและการจอง</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../components/script.js" defer></script>
+    <script src="components/script.js" defer></script>
 </head>
 
 <body class="bg-gray-100 text-gray-900 font-sans">
 
-    <!--Navbar -->
+    <!-- Navbar -->
     <nav class="bg-primary text-accent p-4 flex items-center justify-between">
         <div class="flex items-center space-x-3">
             <img src="components/image/logo.png" alt="MJU Logo" class="w-10 h-10" />
-            <span class="text-lg md:text-xl font-bold"> RoomUsage MJU</span>
+            <span class="text-lg md:text-xl font-bold">REGISTAR.MJU</span>
         </div>
-
         <div class="hidden md:flex space-x-6 text-sm md:text-base">
-            <a href="homepage.html" class="hover:underline">หน้าแรก</a>
+            <a href="../homepage.html" class="hover:underline">หน้าแรก</a>
             <a href="std/Schedule.html" class="hover:underline">ตารางเรียน</a>
+            <a href="RoomUsage.html" class="hover:underline">ตารางการใช้ห้อง</a>
             <a href="Calendar.html" class="hover:underline">ปฏิทินการศึกษา</a>
         </div>
-
         <button class="md:hidden text-accent" id="menuBtn">☰</button>
     </nav>
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="md:hidden hidden bg-primary text-accent p-4 space-y-2">
-        <a href="homepage.html" class="block">หน้าแรก</a>
-        <a href="std/Schedule.html" class="block">ตารางเรียน</a>
+        <a href="../homepage.html" class="block">หน้าแรก</a>
+        <a href="Schedule.html" class="block">ตารางเรียน</a>
+        <a href="RoomUsage.html" class="block">ตารางการใช้ห้อง</a>
         <a href="Calendar.html" class="block">ปฏิทินการศึกษา</a>
     </div>
+
+    <!-- Section: อาคารและตารางห้องเรียน -->
+    <section class="max-w-6xl mx-auto p-6">
+        <h1 class="text-2xl font-bold mb-4">🏫 ตารางการใช้ห้อง / การจองห้อง</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- ตึก SCIT -->
+            <div class="bg-white rounded-2xl shadow-md p-6">
+                <h2 class="text-xl font-semibold mb-2">ตึกวิทยาศาสตร์และเทคโนโลยี (SCIT)</h2>
+                <p class="text-sm text-gray-600 mb-4">ห้องเรียนยอดนิยม: SCIT 202, SCIT 303</p>
+                <button class="bg-primary text-accent px-4 py-2 rounded-lg hover:bg-green-700 transition"
+                    onclick="alert('คุณกำลังจองห้อง SCIT 202')">จองห้อง</button>
+            </div>
+
+            <!-- ตึกวิศวกรรม (CE) -->
+            <div class="bg-white rounded-2xl shadow-md p-6">
+                <h2 class="text-xl font-semibold mb-2">ตึกวิศวกรรมศาสตร์ (CE)</h2>
+                <p class="text-sm text-gray-600 mb-4">ห้องเรียนยอดนิยม: CE 105, CE 204</p>
+                <button class="bg-primary text-accent px-4 py-2 rounded-lg hover:bg-green-700 transition"
+                    onclick="alert('คุณกำลังจองห้อง CE 204')">จองห้อง</button>
+            </div>
+
+            <!-- ตึกเกษตร (AG) -->
+            <div class="bg-white rounded-2xl shadow-md p-6">
+                <h2 class="text-xl font-semibold mb-2">ตึกเกษตรศาสตร์ (AG)</h2>
+                <p class="text-sm text-gray-600 mb-4">ห้องเรียนยอดนิยม: AG 301, AG 102</p>
+                <button class="bg-primary text-accent px-4 py-2 rounded-lg hover:bg-green-700 transition"
+                    onclick="alert('คุณกำลังจองห้อง AG 301')">จองห้อง</button>
+            </div>
+
+            <!-- สามารถเพิ่มตึกอื่นได้ที่นี่ -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-accent text-center p-4 mt-8">
+        © 2025 ระบบทะเบียนนักศึกษา มหาวิทยาลัยแม่โจ้
+    </footer>
+
+    <!-- Script for mobile menu -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
