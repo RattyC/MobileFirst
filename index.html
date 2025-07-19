@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="components/script.js" defer></script>
-    <link href="components/style.css" rel="stylesheet" />   
+    <link href="components/style.css" rel="stylesheet" />
 </head>
 
 <body class="bg-gradient-to-br from-light to-[#f5f5f5] text-dark font-sans h-screen flex flex-col">
@@ -18,6 +18,13 @@
     <header class="text-center py-6 animate-fade">
         <img src="components/image/logo.png" alt="MJU Logo" class="mx-auto w-24 md:w-32 mb-2" />
         <h1 class="text-xl md:text-2xl font-bold text-primary">ระบบทะเบียนนักศึกษา มหาวิทยาลัยแม่โจ้</h1>
+        <nav class="mt-4 flex justify-center space-x-4 text-sm md:text-base">
+            <a href="index.html" class="text-primary hover:underline">หน้าแรก</a>
+            <a href="timetable.html" class="text-primary hover:underline">ตารางเรียน</a>
+            <a href="room-usage.html" class="text-primary hover:underline">ตารางการใช้ห้อง</a>
+            <a href="calendar.html" class="text-primary hover:underline">ปฏิทินการศึกษา</a>
+        </nav>
+
     </header>
 
     <!-- Welcome -->
@@ -31,11 +38,13 @@
 
         <!-- นักศึกษา -->
         <a href="std/loginstd.html" class="block">
-            <div class="bg-accent text-primary p-6 rounded-xl shadow-md flex flex-col items-center justify-center text-center space-y-4 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl cursor-pointer h-full">
+            <div
+                class="bg-accent text-primary p-6 rounded-xl shadow-md flex flex-col items-center justify-center text-center space-y-4 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl cursor-pointer h-full">
                 <div class="text-5xl animate-bounce">🎓</div>
                 <h2 class="text-2xl md:text-3xl font-bold">นักศึกษา</h2>
                 <p class="text-base md:text-lg">เข้าสู่ระบบเพื่อตรวจสอบตารางเรียน ปฏิทิน และข้อมูลห้องเรียน</p>
-                <span class="bg-primary text-accent px-6 py-2 rounded-lg hover:bg-[#121221] transition-all duration-300 shadow hover:shadow-md">
+                <span
+                    class="bg-primary text-accent px-6 py-2 rounded-lg hover:bg-[#121221] transition-all duration-300 shadow hover:shadow-md">
                     เข้าสู่ระบบนักศึกษา
                 </span>
             </div>
@@ -43,11 +52,13 @@
 
         <!-- อาจารย์ -->
         <a href="teacher/loginteach.html" class="block">
-            <div class="bg-primary text-accent p-6 rounded-xl shadow-md flex flex-col items-center justify-center text-center space-y-4 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl cursor-pointer h-full">
+            <div
+                class="bg-primary text-accent p-6 rounded-xl shadow-md flex flex-col items-center justify-center text-center space-y-4 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl cursor-pointer h-full">
                 <div class="text-5xl animate-bounce">👨‍🏫</div>
                 <h2 class="text-2xl md:text-3xl font-bold">อาจารย์</h2>
                 <p class="text-base md:text-lg">เข้าสู่ระบบเพื่อตรวจสอบรายวิชาและบันทึกผลเกรดรายบุคคล</p>
-                <span class="bg-accent text-primary px-6 py-2 rounded-lg hover:bg-[#f5deb3] transition-all duration-300 shadow hover:shadow-md">
+                <span
+                    class="bg-accent text-primary px-6 py-2 rounded-lg hover:bg-[#f5deb3] transition-all duration-300 shadow hover:shadow-md">
                     เข้าสู่ระบบอาจารย์
                 </span>
             </div>
