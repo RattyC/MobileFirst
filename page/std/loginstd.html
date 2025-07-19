@@ -1,1 +1,62 @@
- login ของ นักศึกษา 
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>เข้าสู่ระบบสำหรับนักศึกษา</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <script src="../components/tailwind-config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../components/script.js" defer></script>
+    <link href="../components/style.css" rel="stylesheet" />
+</head>
+
+<body
+    class="bg-gradient-to-br from-light via-white to-accent/10 text-primary min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
+
+    <!-- เอฟเฟกต์ฉากหลัง -->
+    <div class="absolute top-0 left-0 w-80 h-80 bg-accent opacity-30 blur-3xl rounded-full -z-10 animate-pulse"></div>
+    <div class="absolute bottom-0 right-0 w-80 h-80 bg-primary opacity-20 blur-2xl rounded-full -z-10 animate-ping">
+    </div>
+
+    <!-- กล่อง Login -->
+    <div
+        class="container max-w-md mx-auto bg-white rounded-2xl shadow-2xl p-6 sm:p-10 animate-bounceIn transition-all duration-700">
+
+        <!-- โลโก้ -->
+        <div class="text-center mb-6">
+            <img src="../components/image/logo.png" alt="MJU Logo" class="w-16 h-16 mx-auto mb-2 drop-shadow" />
+            <h1 class="text-xl font-bold text-primary">เข้าสู่ระบบนักศึกษา</h1>
+            <p class="text-sm text-gray-500">REGISTAR.MJU</p>
+        </div>
+
+        <!-- ฟอร์ม Login -->
+        <form action="indexstd.html" method="GET" class="space-y-4">
+            <div class="text-center mb-4">
+                <p class="text-gray-600">กรุณาใส่ชื่อผู้ใช้และรหัสผ่านของคุณ</p>
+            <div>
+                <label for="username" class="block text-sm font-medium text-gray-700">ชื่อผู้ใช้</label>
+                <input type="text" id="username" name="username" required
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-inner focus:ring-accent focus:border-accent transition" />
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">รหัสผ่าน</label>
+                <input type="password" id="password" name="password" required
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-inner focus:ring-accent focus:border-accent transition" />
+            </div>
+
+            <button type="submit"
+                class="w-full bg-primary text-accent font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-dark active:scale-95 transition-transform duration-200">
+                เข้าสู่ระบบ
+            </button>
+        </form>
+
+        <!-- ลิงก์ลืมรหัสผ่าน -->
+        <div class="text-center mt-4">
+            <a href="#" class="text-sm text-gray-500 hover:underline">ลืมรหัสผ่าน?</a>
+        </div>
+    </div>
+</body>
+
+</html>

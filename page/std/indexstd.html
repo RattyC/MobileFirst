@@ -12,22 +12,33 @@
 
 <body class="bg-gray-100 text-gray-900 font-sans">
 
+
     <!--Navbar -->
-    <nav class="bg-primary text-accent p-4 flex items-center justify-between">
-        <div class="flex items-center space-x-3">
-            <img src="../components/image/logo.png" alt="MJU Logo" class="w-10 h-10" />
-            <span class="text-lg md:text-xl font-bold">REGISTAR.MJU</span>
+    <nav class="bg-primary text-accent p-4 ">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="/page/components/image/logo.png" alt="MJU Logo" class="w-10 h-10" />
+                <span class="text-lg md:text-xl font-bold">ปฏิทินการศึกษา</span>
+            </div>
+            <div class="hidden md:flex space-x-6 text-sm md:text-base">
+                <a href="../index.html" class="hover:underline">หน้าแรก</a>
+                <a href="Schedule.html" class="hover:underline">ตารางเรียน</a>
+                <a href="/page/RoomUsage.html" class="hover:underline">ตารางการใช้ห้อง</a>
+                <a href="/page/Calendar.html" class="hover:underline">ปฏิทินการศึกษา</a>
+                <a href="loginstd.html" class="hover:underline">ออกจากระบบ</a>
+            </div>
+            <button class="md:hidden text-accent" id="menuBtn">☰</button>
         </div>
-
-        <div class="hidden md:flex space-x-6 text-sm md:text-base">
-            <a href="../homepage.html" class="hover:underline">หน้าแรก</a>
-            <a href="Schedule.html" class="hover:underline">ตารางเรียน</a>
-            <a href="../RoomUsage.html" class="hover:underline">ตารางการใช้ห้อง</a>
-            <a href="../Calendar.html" class="hover:underline">ปฏิทินการศึกษา</a>
-        </div>
-
-        <button class="md:hidden text-accent" id="menuBtn">☰</button>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-primary text-accent p-4 space-y-2">
+        <a href="../index.html" class="block">หน้าแรก</a>
+        <a href="std/Schedule.html" class="block">ตารางเรียน</a>
+        <a href="/page/RoomUsage.html" class="block">ตารางการใช้ห้อง</a>
+        <a href="/page/Calendar.html" class="block">ปฏิทินการศึกษา</a>
+        <a href="loginstd.html" class="hover:underline">ออกจากระบบ</a>
+    </div>
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="md:hidden hidden bg-primary text-accent p-4 space-y-2">
@@ -38,7 +49,7 @@
     </div>
 
     <!--hero Section -->
-    <section class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 p-6"> 
+    <section class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
         <a href="Schedule.html"
             class="block bg-white rounded-2xl shadow-md p-6 hover:shadow-xl hover:scale-[1.02] transition transform duration-200">
             <h2 class="text-lg font-semibold mb-2">📋 ตารางเรียน</h2>
@@ -67,8 +78,8 @@
         const mobileMenu = document.getElementById('mobileMenu');
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+        })
+            </script>Qt
 
 </body>
 

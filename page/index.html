@@ -8,13 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="components/script.js" defer></script>
+    <link href="components/style.css" rel="stylesheet" />   
 </head>
 
-<body class="bg-gradient-to-br from-light to-[#f5f5f5] text-dark font-sans min-h-screen flex flex-col">
+<body class="bg-gradient-to-br from-light to-[#f5f5f5] text-dark font-sans h-screen flex flex-col">
 
     <!-- Header -->
     <header class="text-center py-6 animate-fade">
-        <img src="components/image/logo.png " alt="MJU Logo" class="mx-auto w-24 md:w-32 mb-2 " />
+        <img src="components/image/logo.png" alt="MJU Logo" class="mx-auto w-24 md:w-32 mb-2" />
         <h1 class="text-xl md:text-2xl font-bold text-primary">ระบบทะเบียนนักศึกษา มหาวิทยาลัยแม่โจ้</h1>
     </header>
 
@@ -28,28 +29,24 @@
     <main class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-10 pb-10 animate-fade">
 
         <!-- นักศึกษา -->
-        <a href="std/indexstd.html" class="block">
-            <div
-                class="bg-accent text-primary p-6 rounded-xl shadow-md flex flex-col items-center justify-center text-center space-y-4 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl cursor-pointer h-full">
+        <a href="std/loginstd.html" class="block">
+            <div class="bg-accent text-primary p-6 rounded-xl shadow-md flex flex-col items-center justify-center text-center space-y-4 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl cursor-pointer h-full">
                 <div class="text-5xl animate-bounce">🎓</div>
                 <h2 class="text-2xl md:text-3xl font-bold">นักศึกษา</h2>
                 <p class="text-base md:text-lg">เข้าสู่ระบบเพื่อตรวจสอบตารางเรียน ปฏิทิน และข้อมูลห้องเรียน</p>
-                <span
-                    class="bg-primary text-accent px-6 py-2 rounded-lg hover:bg-[#121221] transition-all duration-300 shadow hover:shadow-md">
+                <span class="bg-primary text-accent px-6 py-2 rounded-lg hover:bg-[#121221] transition-all duration-300 shadow hover:shadow-md">
                     เข้าสู่ระบบนักศึกษา
                 </span>
             </div>
         </a>
 
         <!-- อาจารย์ -->
-        <a href="teacher/indexteach.html" class="block">
-            <div
-                class="bg-primary text-accent p-6 rounded-xl shadow-md flex flex-col items-center justify-center text-center space-y-4 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl cursor-pointer h-full">
+        <a href="teacher/loginteach.html" class="block">
+            <div class="bg-primary text-accent p-6 rounded-xl shadow-md flex flex-col items-center justify-center text-center space-y-4 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl cursor-pointer h-full">
                 <div class="text-5xl animate-bounce">👨‍🏫</div>
                 <h2 class="text-2xl md:text-3xl font-bold">อาจารย์</h2>
                 <p class="text-base md:text-lg">เข้าสู่ระบบเพื่อตรวจสอบรายวิชาและบันทึกผลเกรดรายบุคคล</p>
-                <span
-                    class="bg-accent text-primary px-6 py-2 rounded-lg hover:bg-[#f5deb3] transition-all duration-300 shadow hover:shadow-md">
+                <span class="bg-accent text-primary px-6 py-2 rounded-lg hover:bg-[#f5deb3] transition-all duration-300 shadow hover:shadow-md">
                     เข้าสู่ระบบอาจารย์
                 </span>
             </div>
@@ -58,7 +55,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-primary text-accent text-center p-4 mt-8">
+    <footer class="relative bg-primary text-accent text-center p-4 bottom-0">
         © 2025 ระบบทะเบียนนักศึกษา มหาวิทยาลัยแม่โจ้
     </footer>
     <script>

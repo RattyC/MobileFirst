@@ -2,112 +2,112 @@
 <html lang="th">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ตารางสอนอาจารย์</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../components/script.js" defer></script>
     <link href="../components/style.css" rel="stylesheet" />
 </head>
 
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-light text-primary font-sans">
+
     <!-- Navbar -->
-    <nav class="bg-primary text-accent p-4 flex items-center justify-between">
-        <div class="flex items-center space-x-3">
-            <img src="../components/image/logo.png" alt="MJU Logo" class="w-10 h-10" />
-            <span class="text-lg md:text-xl font-bold">REGISTAR.MJU</span>
+    <nav class="bg-primary text-accent p-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img src="../components/image/logo.png" alt="MJU Logo" class="w-10 h-10" />
+                <span class="text-lg md:text-xl font-bold">REGISTAR.MJU</span>
+            </div>
+            <div class="hidden md:flex space-x-6 text-sm md:text-base">
+                <a href="../index.html" class="hover:underline">หน้าแรก</a>
+                <a href="GradeInput.html" class="hover:underline">บันทึกเกรด</a>
+                <a href="../RoomUsage.html" class="hover:underline">ตารางการใช้ห้อง</a>
+                <a href="../Calendar.html" class="hover:underline">ปฏิทินการศึกษา</a>
+            </div>
+            <button class="md:hidden text-accent" id="menuBtn">☰</button>
         </div>
-        <div class="hidden md:flex space-x-6 text-sm md:text-base">
-            <a href="../homepage.html" class="hover:underline">หน้าแรก</a>
-            <a href="GradeInput.html" class="hover:underline">บันทึกเกรด</a>
-            <a href="../RoomUsage.html" class="hover:underline">ตารางการใช้ห้อง</a>
-            <a href="../Calendar.html" class="hover:underline">ปฏิทินการศึกษา</a>
-        </div>
-        <button class="md:hidden text-accent" id="menuBtn">☰</button>
     </nav>
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="md:hidden hidden bg-primary text-accent p-4 space-y-2">
-        <a href="../homepage.html" class="block">หน้าแรก</a>
+        <a href="../index.html" class="block">หน้าแรก</a>
         <a href="GradeInput.html" class="block">บันทึกเกรด</a>
         <a href="../RoomUsage.html" class="block">ตารางการใช้ห้อง</a>
         <a href="../Calendar.html" class="block">ปฏิทินการศึกษา</a>
     </div>
 
-    <!-- Teaching Schedule -->
-    <main class="max-w-5xl mx-auto p-6">
-        <h1 class="text-2xl font-bold mb-4">📘 ตารางสอนอาจารย์ ภาคเรียนที่ 1/2568</h1>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 my-auto flex flex-col justify-center fade-in min-h-screen">
+        <h1 class="text-3xl font-bold text-center mb-6 animate-pulse">📘 ตารางสอนอาจารย์ ภาคเรียนที่ 1/2568</h1>
+        <h2 class="text-xl text-center text-gray-600 mb-8">อ.ดร.ธนวัฒน์ ใจดี</h2>
 
-        <!-- Content -->
-        <main class="p-6">
-            <h1 class="text-2xl font-bold mb-4 text-center">ตารางสอนอาจารย์ ดร.ธนวัฒน์ ใจดี</h1>
+        <div class="overflow-x-auto rounded-lg shadow-md">
+            <table class="table-auto w-full text-sm border-collapse border border-gray-300 bg-white">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th class="p-2 border border-gray-300">วัน</th>
+                        <th class="p-2 border border-gray-300">เวลา</th>
+                        <th class="p-2 border border-gray-300">รหัสวิชา</th>
+                        <th class="p-2 border border-gray-300">ชื่อวิชา</th>
+                        <th class="p-2 border border-gray-300">ห้องเรียน</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="hover:bg-yellow-50 transition">
+                        <td class="p-2 border text-center">จันทร์</td>
+                        <td class="p-2 border text-center">08:00-10:00</td>
+                        <td class="p-2 border text-center">CS203</td>
+                        <td class="p-2 border">โครงสร้างข้อมูล</td>
+                        <td class="p-2 border text-center">LAB304</td>
+                    </tr>
+                    <tr class="bg-gray-50 hover:bg-yellow-50 transition">
+                        <td class="p-2 border text-center">อังคาร</td>
+                        <td class="p-2 border text-center">10:00-12:00</td>
+                        <td class="p-2 border text-center">CS204</td>
+                        <td class="p-2 border">การเขียนโปรแกรมขั้นสูง</td>
+                        <td class="p-2 border text-center">LAB305</td>
+                    </tr>
+                    <tr class="hover:bg-yellow-50 transition">
+                        <td class="p-2 border text-center">พุธ</td>
+                        <td class="p-2 border text-center">13:00-15:00</td>
+                        <td class="p-2 border text-center">CS305</td>
+                        <td class="p-2 border">ระบบฐานข้อมูล</td>
+                        <td class="p-2 border text-center">LAB201</td>
+                    </tr>
+                    <tr class="bg-gray-50 hover:bg-yellow-50 transition">
+                        <td class="p-2 border text-center">พฤหัสบดี</td>
+                        <td class="p-2 border text-center">08:00-10:00</td>
+                        <td class="p-2 border text-center">CS410</td>
+                        <td class="p-2 border">ปัญญาประดิษฐ์เบื้องต้น</td>
+                        <td class="p-2 border text-center">LAB402</td>
+                    </tr>
+                    <tr class="hover:bg-yellow-50 transition">
+                        <td class="p-2 border text-center">ศุกร์</td>
+                        <td class="p-2 border text-center">09:00-12:00</td>
+                        <td class="p-2 border text-center">CS499</td>
+                        <td class="p-2 border">โครงงานวิทยาการคอมพิวเตอร์</td>
+                        <td class="p-2 border text-center">LAB501</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
 
-            <div class="overflow-x-auto">
-                <table class="table-auto w-full text-sm border-collapse border border-gray-300">
-                    <thead class="bg-primary text-white">
-                        <tr>
-                            <th class="p-2 border border-gray-300">วัน</th>
-                            <th class="p-2 border border-gray-300">เวลา</th>
-                            <th class="p-2 border border-gray-300">รหัสวิชา</th>
-                            <th class="p-2 border border-gray-300">ชื่อวิชา</th>
-                            <th class="p-2 border border-gray-300">ห้องเรียน</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-white hover:bg-yellow-50">
-                            <td class="p-2 border border-gray-300 text-center">จันทร์</td>
-                            <td class="p-2 border border-gray-300 text-center">08:00-10:00</td>
-                            <td class="p-2 border border-gray-300 text-center">CS203</td>
-                            <td class="p-2 border border-gray-300">โครงสร้างข้อมูล</td>
-                            <td class="p-2 border border-gray-300 text-center">LAB304</td>
-                        </tr>
-                        <tr class="bg-gray-50 hover:bg-yellow-50">
-                            <td class="p-2 border border-gray-300 text-center">อังคาร</td>
-                            <td class="p-2 border border-gray-300 text-center">10:00-12:00</td>
-                            <td class="p-2 border border-gray-300 text-center">CS204</td>
-                            <td class="p-2 border border-gray-300">การเขียนโปรแกรมขั้นสูง</td>
-                            <td class="p-2 border border-gray-300 text-center">LAB305</td>
-                        </tr>
-                        <tr class="bg-white hover:bg-yellow-50">
-                            <td class="p-2 border border-gray-300 text-center">พุธ</td>
-                            <td class="p-2 border border-gray-300 text-center">13:00-15:00</td>
-                            <td class="p-2 border border-gray-300 text-center">CS305</td>
-                            <td class="p-2 border border-gray-300">ระบบฐานข้อมูล</td>
-                            <td class="p-2 border border-gray-300 text-center">LAB201</td>
-                        </tr>
-                        <tr class="bg-gray-50 hover:bg-yellow-50">
-                            <td class="p-2 border border-gray-300 text-center">พฤหัสบดี</td>
-                            <td class="p-2 border border-gray-300 text-center">08:00-10:00</td>
-                            <td class="p-2 border border-gray-300 text-center">CS410</td>
-                            <td class="p-2 border border-gray-300">ปัญญาประดิษฐ์เบื้องต้น</td>
-                            <td class="p-2 border border-gray-300 text-center">LAB402</td>
-                        </tr>
-                        <tr class="bg-white hover:bg-yellow-50">
-                            <td class="p-2 border border-gray-300 text-center">ศุกร์</td>
-                            <td class="p-2 border border-gray-300 text-center">09:00-12:00</td>
-                            <td class="p-2 border border-gray-300 text-center">CS499</td>
-                            <td class="p-2 border border-gray-300">โครงงานวิทยาการคอมพิวเตอร์</td>
-                            <td class="p-2 border border-gray-300 text-center">LAB501</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </main>
+    <!-- Footer -->
+    <footer class="bg-primary text-accent text-center p-4 mt-8">
+        © 2025 ระบบทะเบียนนักศึกษา มหาวิทยาลัยแม่โจ้
+    </footer>
 
-        <!-- Footer -->
-        <footer class="bg-primary text-accent text-center p-4 mt-8">
-            © 2025 ระบบทะเบียนนักศึกษา มหาวิทยาลัยแม่โจ้
-        </footer>
-
-        <!-- Script for mobile menu -->
-        <script>
-            const menuBtn = document.getElementById('menuBtn');
-            const mobileMenu = document.getElementById('mobileMenu');
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        </script>
+    <!-- Script -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
