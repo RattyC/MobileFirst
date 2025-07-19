@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="th" class="bg-light font-sans">
+<html lang="th" class="bg-gray-50 font-sans">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>การใช้ห้อง</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
     <script src="components/script.js" defer></script>
-    <link rel="stylesheet" href="components/CSStyle.css">
+    <link rel="stylesheet" href="components/CSStyle.css" />
 </head>
 
-<body class="bg-light text-primary">
+<body class="bg-gray-50 text-gray-900">
     <!--Navbar -->
     <nav class="bg-primary text-accent p-4 flex items-center justify-between">
         <div class="flex items-center space-x-3">
@@ -25,9 +24,12 @@
             <a href="std/Schedule.html" class="hover:underline">ตารางเรียน</a>
             <a href="RoomUsage.html" class="hover:underline">ตารางการใช้ห้อง</a>
             <a href="Calendar.html" class="hover:underline">ปฏิทินการศึกษา</a>
+            <a href="teacher/loginteach.html" class="hover:underline">Login สำหรับอาจารย์</a>
         </div>
 
-        <button class="md:hidden text-accent" id="menuBtn">☰</button>
+        <button class="md:hidden text-accent" id="menuBtn" aria-label="เปิดเมนูหลัก">
+            ☰
+        </button>
     </nav>
 
     <!-- Mobile Menu -->
@@ -36,6 +38,7 @@
         <a href="std/Schedule.html" class="block">ตารางเรียน</a>
         <a href="RoomUsage.html" class="block">ตารางการใช้ห้อง</a>
         <a href="Calendar.html" class="block">ปฏิทินการศึกษา</a>
+        <a href="teacher/loginteach.html" class="block">Login สำหรับอาจารย์</a>
     </div>
 
     <!-- Section: อาคารและตารางห้องเรียน -->
@@ -49,7 +52,9 @@
                 <h2 class="text-xl font-semibold mb-2">ตึกวิทยาศาสตร์และเทคโนโลยี (SCIT)</h2>
                 <p class="text-sm text-gray-600 mb-4">ห้องเรียนยอดนิยม: SCIT 202, SCIT 303</p>
                 <button class="bg-primary text-accent px-4 py-2 rounded-lg hover:bg-green-700 transition"
-                    onclick="alert('คุณกำลังจองห้อง SCIT 202')">จองห้อง</button>
+                    data-room="SCIT 202" onclick="openBookingModal(this.dataset.room)">
+                    จองห้อง
+                </button>
             </div>
 
             <!-- ตึกวิศวกรรม (CE) -->
@@ -57,7 +62,9 @@
                 <h2 class="text-xl font-semibold mb-2">ตึกวิศวกรรมศาสตร์ (CE)</h2>
                 <p class="text-sm text-gray-600 mb-4">ห้องเรียนยอดนิยม: CE 105, CE 204</p>
                 <button class="bg-primary text-accent px-4 py-2 rounded-lg hover:bg-green-700 transition"
-                    onclick="alert('คุณกำลังจองห้อง CE 204')">จองห้อง</button>
+                    data-room="CE 204" onclick="openBookingModal(this.dataset.room)">
+                    จองห้อง
+                </button>
             </div>
 
             <!-- ตึกเกษตร (AG) -->
@@ -65,10 +72,10 @@
                 <h2 class="text-xl font-semibold mb-2">ตึกเกษตรศาสตร์ (AG)</h2>
                 <p class="text-sm text-gray-600 mb-4">ห้องเรียนยอดนิยม: AG 301, AG 102</p>
                 <button class="bg-primary text-accent px-4 py-2 rounded-lg hover:bg-green-700 transition"
-                    onclick="alert('คุณกำลังจองห้อง AG 301')">จองห้อง</button>
+                    data-room="AG 301" onclick="openBookingModal(this.dataset.room)">
+                    จองห้อง
+                </button>
             </div>
-
-            <!-- สามารถเพิ่มตึกอื่นได้ที่นี่ -->
         </div>
     </section>
 
@@ -113,18 +120,63 @@
         </div>
     </section>
 
+    <!-- Modal จองห้อง -->
+    <div id="bookingModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden"
+        aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="bg-white rounded-lg p-6 max-w-sm w-full relative">
+            <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-900" aria-label="ปิดหน้าต่าง"
+                onclick="closeBookingModal()">
+                ✕
+            </button>
+            <h3 class="text-xl font-semibold mb-4">ยืนยันการจองห้อง</h3>
+            <p id="bookingRoomName" class="mb-6"></p>
+            <button class="bg-primary text-accent px-4 py-2 rounded-lg hover:bg-green-700 transition"
+                onclick="confirmBooking()">
+                ยืนยัน
+            </button>
+            <button class="ml-4 px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-100"
+                onclick="closeBookingModal()">
+                ยกเลิก
+            </button>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="bg-primary text-accent text-center p-4 mt-8">
         © 2025 ระบบทะเบียนนักศึกษา มหาวิทยาลัยแม่โจ้
     </footer>
 
-    <!-- Script for mobile menu -->
+    <!-- Script for mobile menu and modal -->
     <script>
+        // Toggle mobile menu
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+        // Modal booking logic
+        const bookingModal = document.getElementById('bookingModal');
+        const bookingRoomName = document.getElementById('bookingRoomName');
+        let currentRoom = '';
+
+        function openBookingModal(room) {
+            currentRoom = room;
+            bookingRoomName.textContent = `คุณกำลังจองห้อง: ${room}`;
+            bookingModal.classList.remove('hidden');
+            bookingModal.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeBookingModal() {
+            bookingModal.classList.add('hidden');
+            bookingModal.setAttribute('aria-hidden', 'true');
+            currentRoom = '';
+        }
+
+        function confirmBooking() {
+            alert(`จองห้อง ${currentRoom} สำเร็จ!`);
+            closeBookingModal();
+        }
     </script>
 </body>
 
